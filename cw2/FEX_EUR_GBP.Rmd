@@ -12,11 +12,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Informacje ogólne
-Raport dotyczy analizy ceny kursu sprzedaży euro do funta brytyjskiego.\newline
-Dane pochodzą ze strony histdata.com. \newline
-\newline
+Raport dotyczy analizy ceny kursu sprzedaży euro do funta brytyjskiego.  
+Dane pochodzą ze strony histdata.com.  
+  
 Okres z którego pochodzą dane: 01.01.2019-08.01.2019r.
-\newline
+  
 
 ```{r}
 options(max.print = 99999999) 
@@ -39,7 +39,6 @@ summary(d$zamkniecie)
 Poniższe wykresy zostały sporządzone w oparciu o kurs zamknięcia.\newline
 \newline
 Średni kurs dla wszystkich danych wynosi 0,8768, natomiast mediana dla wszystkich danych wynosi 0,8760.
-
 ## Wykresy
 
 
@@ -49,6 +48,9 @@ abline(h=mean(d$zamkniecie),lty=1, col="blue")
 abline(h=median(d$zamkniecie),lty=1, col="deeppink2")
 legend("topright", legend=c("Mediana", "Średni kurs"),
        col=c("deeppink2","blue"), lty=1, cex=0.8,bg='lightblue')
+```
+
+```{r  echo=FALSE}
 
 hist(d$zamkniecie, 
      main="Histogram dla danych opisujących kurs zamknięcia", 
